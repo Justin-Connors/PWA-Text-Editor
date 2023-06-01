@@ -18,9 +18,25 @@ module.exports = () => {
       path: path.resolve(__dirname, 'dist'),
     },
     plugins: [
-      new InjectManifest({
-        swSrc: './src-sw.js',
-        swDest: 'sw.js',
+      new HtmlWebpackPlugin({
+        template: './index.html',
+        inject: true,
+      }),
+
+      new WebpackPwaManifest({
+        name: 'JATE',
+        short_name: 'JATE',
+        description: 'JATE - Just Another Text Editor',
+        background_color: '#ffffff',
+        theme_color: '#225ca3',
+        start_url: './',
+        icons: [
+          {
+            src: path.resolve('src/images/logo.png'),
+            sizes: [96, 128, 192, 256, 384, 512],
+            destination: path.join('assets', 'icons'),
+          },
+        ],
       }),
     ],
 
@@ -39,5 +55,11 @@ module.exports = () => {
         }
       ],
     },
+    plugins: [
+      new InjectManifest({
+        swSrc: './src-sw.js',
+        swDest: 'src-sw.js',
+      }),
+    ],
   };
 };
