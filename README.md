@@ -1,6 +1,6 @@
 # PWA Text Editor
 
-![JATE Thumbnail](img\JATE-TN.png)
+![JATE Thumbnail](./img/JATE-TN.png)
 
 ## Features
 Text Editing: Create and edit text documents with a user-friendly interface.
