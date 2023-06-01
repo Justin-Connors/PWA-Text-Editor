@@ -18,12 +18,18 @@ module.exports = () => {
       path: path.resolve(__dirname, 'dist'),
     },
     plugins: [
-      
+      new InjectManifest({
+        swSrc: './src-sw.js',
+        swDest: 'sw.js',
+      }),
     ],
 
     module: {
       rules: [
-        
+        {
+        test: /\.css$/i,
+        use: ['style-loader', 'css-loader'],
+        }
       ],
     },
   };
