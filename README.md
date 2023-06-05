@@ -14,9 +14,9 @@ Clone the repository:
 `git clone https://github.com/Justin-Connors/PWA-Text-Editor.git`
 Navigate to the project directory:
 `cd PWA-Text-Editor` <br>
-Follow these steps: <br>
+Follow these steps in the client directory: <br>
 `npm run build` <br>
-`npm start dev` <br>
+`npm run dev` <br>
 `Navigate to http://localhost:8080` in your preferred browser. <br>
 `install at the top, accept the prompt`
 
